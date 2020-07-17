@@ -35,7 +35,8 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 1. Describe props.
 
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-
+  Side Effects are basically anything that affects something outside of the scope of the current function that’s being executed (like API requests to a back-end service).
+  
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
@@ -98,12 +99,12 @@ After finishing your required elements, you can push your work further. These go
 - [ ] Make the Character component more complex and break it into several subcomponents.
 - [ ] Create a helper function in separate module to remove unneeded information from the API data, before putting it in state.
 - [ ] Use Promise.all to resolve an array of promises.
-- [ ] Create transitions or animations with styled-components.
+- [x] Create transitions or animations with styled-components.
 
 ## Submission format
 
 Follow these steps for completing your project.
 
-- [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's  Repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull-request
-- [ ] Your team lead will count the project as complete after receiving your pull-request
+- [x] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` branch (student's  Repo). **Please don't merge your own pull request**
+- [x] Add your team lead as a reviewer on the pull-request
+- [x] Your team lead will count the project as complete after receiving your pull-request

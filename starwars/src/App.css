@@ -2,8 +2,15 @@
   text-align: center;
 }
 .Header {
-  color: blue;
-  font-size: 4rem;
-  text-shadow: 1px 1px 5px #fff;
+  color: #440381;
+  font-size: 6rem;
+  text-shadow: 1px 1px 5px #51E5FF;
 }
 /* write your parent styles in here for your App.js */
+
+@media(max-width: 500px) {
+  .Header{
+  width: 90vw;
+  font-size: 4rem;
+  }
+}

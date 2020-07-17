@@ -7,18 +7,74 @@ const StyledContainer = styled.div`
     display:flex;
     flex-wrap:wrap;
     justify-content: space-around;
+    @media(max-width: 500px) {
+    &{
+    width: 90vw;
+    }
+    }
  `
-const StyledCard = styled.div`
-    display:flex;
-    flex-direction:column;
-    border: 3px solid blue;
+const FlipCard = styled.div`
+    background-color: transparent;
+    width: 15vw;
+    height:30vh;
+    perspective: 1000px;
     padding: 15px;
     margin: 15px;
-    width: 15vw;
-    background-color:white;
+    @media(max-width: 500px) {
+    &{
+    width: 90vw;
+    }
+}
 `
-
-
+const FlipCardInner = styled.div`
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    &:hover {
+    transform: rotateY(180deg);
+    }
+`
+const FlipCardFront = styled.div`
+    position: absolute;
+    padding: 10px;
+    background-color: #51E5FF;
+    border: 3px solid #51E5FF;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    img {
+        width: 100%;
+        height: 100%;
+    }
+`
+const FlipCardBack = styled.div`
+    background-color: #440381;
+    border: 10px solid #51E5FF;
+    transform: rotateY(180deg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    h2{
+        color: white;
+        text-decoration:underline;
+    }
+    p{
+        color: white;
+    }
+`
+const CardContainer = styled.div`
+    display:flex;
+    margin: 15px;
+    @media(max-width: 500px) {
+    &{
+    width: 90%;
+    }
+}
+`
 
 export default function Character (){
 
@@ -39,15 +95,21 @@ export default function Character (){
 
 
     const CharacterCard = ({info}) => (
-            
-                <StyledCard>
-                    <h2>{info.name}</h2>
-                    <img src={info.image} alt=''></img>
-                    <p> Gender: {info.gender}</p>
-                    <p> Species: {info.species}</p>
-                    <p> Status: {info.status}</p>
-                </StyledCard>
-     
+            <CardContainer>
+                <FlipCard>
+                    <FlipCardInner>
+                        <FlipCardFront>
+                            <img src={info.image} alt=''></img>
+                        </FlipCardFront>
+                        <FlipCardBack>
+                            <h2>{info.name}</h2>
+                            <p> Gender: {info.gender}</p>
+                            <p> Species: {info.species}</p>
+                            <p> Status: {info.status}</p>
+                        </FlipCardBack>
+                    </FlipCardInner>
+                </FlipCard>
+            </CardContainer>
     )
     return (
         <StyledContainer>
