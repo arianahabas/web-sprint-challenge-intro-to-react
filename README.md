@@ -29,14 +29,19 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
-
-1. Describe component state.
-
-1. Describe props.
-
-1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
-  Side Effects are basically anything that affects something outside of the scope of the current function that’s being executed (like API requests to a back-end service).
+  - React is a JavaScript library for building user interfaces.
+  - It improves redering performance by that of the virtual DOM.
+  - When using React.JS different UI parts of the app are separated into 'components'. One component would contain the necessary markup, JS for functionality and necessary styling. Writing code in this way also makes it very modular and reusable; the same component could be used at different places in your app or even in an entirely different app.
   
+1. Describe component state.
+  - The heart of every React component is its “state”, an object(in class components) that determines how that component renders & behaves. 
+  - In other words, “state” is what allows you to create components that are `dynamic` and `interactive.`
+1. Describe props.
+  - Where HTML elements have “attributes,” React components have “props” (short for “properties”). It’s a different name for essentially the same thing.
+  - Props allow components to be reusable peices of code. 
+1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+  -Side Effects are basically anything that affects something outside of the scope of the current function that’s being executed (like API requests to a back-end service).
+
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
 ## Instructions
